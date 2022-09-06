@@ -1,5 +1,6 @@
-const pokemon_list = require('./db/pokemon')
 require ('dotenv').config()
+
+const pokemon_list = require('./db/pokemon')
 const express = require('express')
 const app = express()
 const port = 3000
