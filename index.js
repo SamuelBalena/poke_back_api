@@ -1,4 +1,5 @@
 const pokemon_list = require('./db/pokemon')
+require ('dotenv').config()
 const express = require('express')
 const app = express()
 const port = 3000
@@ -11,6 +12,6 @@ app.get('/pokemon', (req, res) => {
   res.send(pokemon_list)
 })
 
-app.listen(port, () => {
+app.listen( process.env.PORT || port, () => {
   console.log(`Example app listening on port ${port}`)
 })
