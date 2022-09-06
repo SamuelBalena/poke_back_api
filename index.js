@@ -12,6 +12,7 @@ app.get('/pokemon', (req, res) => {
   res.send(pokemon_list)
 })
 
+// eslint-disable-next-line no-undef
 app.listen( process.env.PORT || port, () => {
   console.log(`Example app listening on port ${port}`)
 })
