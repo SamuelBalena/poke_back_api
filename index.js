@@ -1,5 +1,4 @@
-const pokemon_init = require('./db/pokemon')
-const pokemon_info = require('./db/pokemon_info')
+const pokemon_list = require('./db/pokemon')
 const express = require('express')
 const app = express()
 const port = 3000
@@ -9,11 +8,7 @@ app.get('/',(req,res) => {
 })
 
 app.get('/pokemon', (req, res) => {
-  res.send(pokemon_init)
-})
-
-app.get('/pokemon_info', (req, res) => {
-  res.send(pokemon_info)
+  res.send(pokemon_list)
 })
 
 app.listen(port, () => {
