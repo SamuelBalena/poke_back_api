@@ -1,9 +1,11 @@
 require ('dotenv').config()
 
-const pokemon_list = require('./db/pokemon')
+const path = require('path')
 const express = require('express')
 const app = express()
 const port = 3000
+// const pokemon_list = require(path.dirname('./db/pokemon'))
+const pokemon_list = require('./db/pokemon')
 
 app.get('/',(req,res) => {
   res.send('Okay')
